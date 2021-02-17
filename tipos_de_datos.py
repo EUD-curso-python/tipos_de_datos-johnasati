@@ -5,32 +5,41 @@ data = ('  GARCIA,gonzalez,        rodriguez  ,FERNANDEZ ,LOPEZ,martinez ,  sanc
 """Dividir el string contenido en la variable `data` en donde se encuentre el 
 primer caracter `\n` y guardar el resultado en una variable llamada `var1`.
 """
-
+var1 = data.split('\n', 1)
+print(len(var1))
 
 """Guardar el primer elemento de la variable `var1` en una variable llamada 
 `apellidos` y el segundo elemento en una llamada `decimales`.
 """
-
+apellidos=var1[0]
+decimales=var1[1]
+print(apellidos)
+print(decimales)
 
 """Dividir el string contenido en la variable `apellidos` en donde se encuentre el 
 el caracter `,` y guardar el resultado en una variable llamada `apellidos_list`.
 """
+apellidos_list=apellidos.split(',')
+print(apellidos_list)
 
 
 """Dividir el string contenido en la variable `decimales` en donde se encuentre el 
 el caracter `;` y guardar el resultado en una variable llamada `decimales_list`.
 """
-
+decimales_list = decimales.split(';')
+print(decimales)
 
 """Obtener el elemento en la posición 38 de `decimales_list`, procesarlo para 
 convertirlo en un entero y guardarlo en variable `var2`.
 """
-
+var2=int(float(decimales_list[38]))
+print(var2)
 
 """Obtener el valor en la posición que indique dicho entero (`var2`) de la lista 
 `apellidos_list`. Guardar el resultado en variable `apellido`.
 """
-
+apellido=apellidos_list[var2]
+print(apellido)
 
 """obtener la longitud (cantidad de caracteres) de la variable `apellido` y 
 guardar el resultado en `len_apellido`.
@@ -56,7 +65,6 @@ o de minúsculas a mayúsculas si está en minúsculas y guardarla en `apellido3
 la variable `apellido2`.
 """
 
-
 """Crear variable `apellido_end_ez` que contenga si la variable `apellido2` 
 termina con el string `"ez"`.
 """
@@ -66,13 +74,14 @@ termina con el string `"ez"`.
 al 23 (en orden invertido), saltandose de a 1 elemento (49, 47, 45 , etc) de la
 lista `apellidos_list`.
 """
-
+apellidos_tuple = tuple(apellidos_list[49:22:-2])
 
 """Crear variable `apellidos_list2` que contenga una copia de `apellidos_tuple` 
 (con las conversiones que sean necesarias) y agregarle el elemento de la 
 posición 78 de la lista `apellidos_list`.
 """
-
+apellidos_list2 = apellidos_tuple
+print(apellidos_list2)
 
 """Eliminar el 4 elemento de la variable `apellidos_list2`.
 """
@@ -165,3 +174,4 @@ guardarlo en la variable `apellido_none`.
 """
 
 
+print(type(var2))
